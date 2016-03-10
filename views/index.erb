@@ -1,0 +1,12 @@
+  <div class="grid">
+      <% teams.each_with_index do |team| %>
+      <div class="unit one-third">
+        <h2>The "<%= team.name %>" Team</h2>
+        <p><%= team.description %></p>
+        <a href="/join/<%= team.slug %>">Join the <%= team.name %> team</a>
+      </div>
+      <% if index % 3 == 0 && index > 0 %>
+      <div class="clear"></div>
+      <% end %>
+      <% end %>
+  </div>
