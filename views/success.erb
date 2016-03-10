@@ -1,9 +1,11 @@
-<h2>Success!</h2>
-
-<p>
-  You've successsfully joined @<%= org_id %>'s "<%= team.name %>" team.
-</p>
-
-<p>
-  <a href="/">Join another team?</a>
-</p>
+<div class="grid">
+    <div class="unit whole">
+        <h2>Success!</h2>
+        <p>
+          You've successsfully joined <%= org_id.capitalize %>'s "<%= team.name %>" team.
+        </p>
+        <p>
+          <a href="/">Join another team?</a>
+        </p>
+    </div>
+</div>
