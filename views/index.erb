@@ -1,9 +1,9 @@
 <div class="grid">
     <% teams.each_with_index do |team, index| %>
     <div class="unit one-third">
-        <h2>The "<%= team.name %>" Team</h2>
+        <h2><%= team.name %> Team</h2>
         <p><%= team.description %> Mention with <code>@<%= org_id %>/<%= team.slug %></code></p>
-        <a href="/join/<%= team.slug %>">Join the <%= team.name %> team</a>
+        <a href="/join/<%= team.slug %>">Join the team →</a>
     </div>
     <% if index % 3 == 2 %>
     <div class="clear"></div>
