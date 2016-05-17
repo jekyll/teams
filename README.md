@@ -1,3 +1,3 @@
 # teams
 
-The code behind teams.jekyllrb.com
+The code behind https://teams.jekyllrb.com
