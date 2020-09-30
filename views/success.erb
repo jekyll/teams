@@ -1,12 +1,19 @@
 <div class="grid">
     <div class="unit whole">
-        <h2>Success!</h2>
+      <h2>Success!</h2>
+      <% if organization.member?(user) %>
         <p>
-          You've successsfully joined <%= org_id.capitalize %>'s "<%= team.name %>" team.
-          Be sure to check your email and accept the invite. Once you have done that, you're in!
+          You've successsfully joined <%= organization.name %>'s '<%= team_requested.name %>.
         </p>
+
         <p>
           <a href="/">Join another team?</a>
         </p>
+      <% else %>
+        <p>
+          Almost there. Just one more step.
+          Please <a href="https://github.com/orgs/<%= organization.login %>/invitation">accept this invitation</a> to join <%= organization.name %>, so that we can add you to the <%= team_requested.name %> team.
+        </p>
+      <% end %>
     </div>
 </div>
